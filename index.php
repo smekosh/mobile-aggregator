@@ -2,6 +2,8 @@
 require( "vendor/autoload.php" );
 require( "config.php" );
 require( "modifier_pangea.php" );
+require( "modifier_hostname.php" );
+
 date_default_timezone_set('Europe/Prague');
 if( !isset($config) ) die( "ERROR: config file missing?");
 
