@@ -1,0 +1,24 @@
+
+body, html {
+    background-color:#ccc;
+}
+
+.content {
+    padding:1em;
+    font-size:2em;
+}
+
+.item {
+    margin-bottom:3em;
+    background-color: white;
+}
+.item_inner {
+    padding: 1em;
+    border: 4px solid #ccc;
+}
+.title { padding: 0.5em; }
+.title a { color: black; font-weight: bold }
+.description { line-height:1.5em }
+img { float: left }
+
+.clear { clear: both }
