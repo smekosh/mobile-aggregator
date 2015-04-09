@@ -1,2 +1,7 @@
+config.php
 vendor
 vendor/*
+composer.lock
+templates_c
+cache
+local/*
