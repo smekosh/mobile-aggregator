@@ -19,6 +19,10 @@
             <p class="description">{$item->description}</p>
         </div>
         <div class="clear"></div>
+        <div class="website">
+            <span class="favicon c_{$item->link|hostname|md5}"></span>
+            <span class="hostname">{$item->link|hostname}</span>
+        </div>
     </div>
 </div>
 

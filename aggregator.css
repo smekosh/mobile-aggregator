@@ -72,8 +72,35 @@ h2 {
 .description {
     font-size: 1.6em;
     padding: .8em;
+    line-height:1.3em;
 }
 
 
 
 .clear { clear: both; }
+
+.website {
+    font-family: Arial;
+    font-size: 1.5em;
+    padding: 0 0.5em 0 0;
+    font-weight: bold;
+    color: #777;
+}
+
+.favicon {
+    background-repeat: no-repeat;
+    float: right;
+    width: 16px;
+    height: 16px;
+    display: block;
+    margin-left: 0.5em;
+}
+
+.c_14030bf27452f5d62339e5393a522a7a {
+    background-image: url(http://ir.voanews.com/img/voa/favicon.ico);
+
+}
+
+.c_01b462a2a6e36957c57dfd6ecca8981b {
+    background-image: url(http://www.radiofarda.com/img/rfe/favicon.ico);
+}
