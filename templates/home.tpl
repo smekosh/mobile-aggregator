@@ -9,18 +9,16 @@
 
 <div class="item">
     <div class="item_inner">
-        <div class="title">
+        <h2 class="title">
             <a href="{$item->link}">{$item->title}</a>
-        </div>
-        <div class="description">
+        </h2>
+        <div class="item_body">
 {if $item->enclosure}
-            <a href="{$item->link}">
-                <img src="{$item->enclosure.url|pangea:300}" />
-            </a>
+            <div class="item_img"><a href="{$item->link}"><img src="{$item->enclosure.url|pangea:360}" /></a></div>
 {/if}
-            {$item->description}
-            <div class="clear"></div>
+            <p class="description">{$item->description}</p>
         </div>
+        <div class="clear"></div>
     </div>
 </div>
 

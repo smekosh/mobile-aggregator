@@ -1,4 +1,4 @@
-
+/*
 body, html {
     background-color:#ccc;
 }
@@ -22,3 +22,58 @@ body, html {
 img { float: left }
 
 .clear { clear: both }
+*/
+
+
+
+html { font-size: 62.5%; }
+
+body {
+    background-color: #ddd;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color: red;
+}
+
+.content {
+    padding: 1em;
+}
+
+.item {
+    background-color: #fff;
+    max-width: 100%;
+    margin-bottom: 1em;
+    width: 100%;
+}
+
+.item_inner {
+    border: 2px solid #ccc;
+    padding: 1em 0;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: bold;
+    padding: 0 .5em .5em .25em;
+}
+
+.item_body img {
+    height: auto;
+    max-width: 100%;
+    width: 100%;
+}
+
+.description {
+    font-size: 1.6em;
+    padding: .8em;
+}
+
+
+
+.clear { clear: both; }
