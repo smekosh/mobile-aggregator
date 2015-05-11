@@ -1,31 +1,3 @@
-/*
-body, html {
-    background-color:#ccc;
-}
-
-.content {
-    padding:1em;
-    font-size:2em;
-}
-
-.item {
-    margin-bottom:3em;
-    background-color: white;
-}
-.item_inner {
-    padding: 1em;
-    border: 4px solid #ccc;
-}
-.title { padding: 0.5em; }
-.title a { color: black; font-weight: bold }
-.description { line-height:1.5em }
-img { float: left }
-
-.clear { clear: both }
-*/
-
-
-
 html { font-size: 62.5%; }
 
 body {
@@ -42,18 +14,18 @@ a:hover, a:active {
 }
 
 .content {
-    padding: 1em;
+    padding: 1em .5em;
 }
 
 .item {
-    background-color: #fff;
     max-width: 100%;
-    margin-bottom: 1em;
     width: 100%;
 }
 
 .item_inner {
+    background-color: #fff;
     border: 2px solid #ccc;
+    margin: .5em;
     padding: 1em 0;
 }
 
@@ -103,4 +75,24 @@ h2 {
 
 .c_01b462a2a6e36957c57dfd6ecca8981b {
     background-image: url(http://www.radiofarda.com/img/rfe/favicon.ico);
+}
+
+
+@media (min-width: 600px) {
+
+	.item {
+	    max-width: 50%;
+	    width: 50%;
+	}
+
+}
+
+
+@media (min-width: 900px) {
+
+	.item {
+	    max-width: 33.3333%;
+	    width: 33.3333%;
+	}
+	
 }
