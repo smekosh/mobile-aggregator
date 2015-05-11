@@ -89,11 +89,18 @@ h2 {
 }
 
 
+@media (min-width: 600px) and (max-width: 899px) {
+	.item:nth-child(2n+1) { clear: both; }
+}
+
+
 @media (min-width: 900px) {
 
 	.item {
 	    max-width: 33.3333%;
 	    width: 33.3333%;
 	}
+
+	.item:nth-child(3n+1) { clear: both; }
 	
 }
