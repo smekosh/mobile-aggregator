@@ -5,6 +5,7 @@
     <meta http-equiv="Content-Language" content="fa" />
     <link rel="stylesheet" href="reset.css" type="text/css" />
     <link rel="stylesheet" href="aggregator.css" type="text/css" />
+    <script type="text/javascript" src="layout.js"></script>
 {block name="head"}
 
 {/block}
