@@ -13,7 +13,11 @@ foreach( $config["rss"] as $url ) {
     $file = sprintf("%s.rss", md5($url));
     $url_location = $config["local"] . $file;
 
-    $feeds[] = Feed::loadRss($url_location);
+    try {
+        $feeds[] = Feed::loadRss($url_location);
+    } catch( Exception $err ) {
+        // an exception means empty
+    }
 }
 
 // combine all feed items into $all
