@@ -7,6 +7,13 @@ require( "modifier_hostname.php" );
 date_default_timezone_set('Europe/Prague');
 if( !isset($config) ) die( "ERROR: config file missing?");
 
+// options for site variants
+if( isset($_GET['config']) ) {
+    $alt_config = "config_" . $_GET['config'];
+    if( !isset( $$alt_config ) ) die( "ERROR: alternate config missing?" );
+    $config = $$alt_config;
+}
+
 // required: cron task to wget RSS files, dump into /local/md5*
 $feeds = array();
 foreach( $config["rss"] as $url ) {
@@ -37,6 +44,11 @@ usort( $all, function($a, $b) {
     if( $ts_a < $ts_b ) return( 1 );
     return( 0 );
 });
+
+// limit entries, if configured to do so
+if( isset( $config["limit"] ) ) {
+    $all = array_slice( $all, 0, $config["limit"] );
+}
 
 // let templating display rest
 $smarty = new Smarty();
