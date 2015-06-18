@@ -68,13 +68,21 @@ h2 {
     margin-left: 0.5em;
 }
 
+.body_ltr .favicon {
+    float: left;
+    margin-right: 0.5em;
+}
+
 .c_14030bf27452f5d62339e5393a522a7a {
     background-image: url(http://ir.voanews.com/img/voa/favicon.ico);
-
 }
 
 .c_01b462a2a6e36957c57dfd6ecca8981b {
     background-image: url(http://www.radiofarda.com/img/rfe/favicon.ico);
+}
+
+.c_6625256dd6674e70cfbf0a097edbc72b {
+    background-image: url(http://www.amerikaninsesi.com/img/voa/favicon.ico);
 }
 
 
@@ -102,5 +110,5 @@ h2 {
 	}
 
 	.item:nth-child(3n+1) { clear: both; }
-	
+
 }

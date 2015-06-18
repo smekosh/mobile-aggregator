@@ -12,7 +12,7 @@
 
 {/block}
 </head>
-<body>
+<body class="body_{$config.direction}">
 
 {$config.before_content}
 
