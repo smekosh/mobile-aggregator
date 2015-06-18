@@ -16,7 +16,7 @@
 
 {$config.before_content}
 
-<div class="content" dir="rtl">
+<div class="content" dir="{$config.direction}">
 {block name="body"}
 
 {/block}
