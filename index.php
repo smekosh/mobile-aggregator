@@ -41,4 +41,5 @@ usort( $all, function($a, $b) {
 // let templating display rest
 $smarty = new Smarty();
 $smarty->assign( "feed", $all );
+$smarty->assign( "config", $config );
 $smarty->display('home.tpl');
