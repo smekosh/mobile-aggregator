@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="fa" />
     <link rel="stylesheet" href="{$config.home}/reset.css" type="text/css" />
-    <link rel="stylesheet" href="{$config.home}/aggregator.css?v=0.01" type="text/css" />
+    <link rel="stylesheet" href="{$config.home}/aggregator.css?v=0.02" type="text/css" />
     <script type="text/javascript" src="{$config.home}/layout.js"></script>
 {block name="head"}
 

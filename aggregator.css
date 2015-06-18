@@ -73,6 +73,10 @@ h2 {
     margin-right: 0.5em;
 }
 
+.body_ltr {
+    font-family:Arial,Helvetica,"Arial Unicode MS",sans-serif;
+}
+
 .c_14030bf27452f5d62339e5393a522a7a {
     background-image: url(http://ir.voanews.com/img/voa/favicon.ico);
 }
