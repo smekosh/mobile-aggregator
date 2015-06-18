@@ -5,3 +5,4 @@ composer.lock
 templates_c
 cache
 local/*
+.htaccess
