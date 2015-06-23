@@ -1,5 +1,5 @@
 
-{capture assign=derp}
+{capture assign=html}
 
 {foreach from=$feed item=item}
 
@@ -20,7 +20,7 @@
 <div class="col-md-8 text-left row">
     <h4>
         <a class="text-info" href="{$item->link}?src=persagg-title">{$item->title}</a>
-    </h2>
+    </h4>
     <p class="description">
         <a class="text-muted" href="{$item->link}?src=persagg-text">{$item->description}</a>
     </p>
@@ -34,7 +34,7 @@
 
 {/capture}
 
-$(".col-sm-12").html({$derp|json_encode});
+{$html}
 {*
-{$derp}
+$(".col-sm-12").html({$html|json_encode});
 *}
