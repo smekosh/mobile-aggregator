@@ -2,6 +2,7 @@
 
 $config = array(
     "home" => "http://example1.com", # no trailing slash
+    "template" => "home.tpl",
     "direction" => "rtl",
     "rss" => array(
         "http://example1.com/rss/",

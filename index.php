@@ -3,6 +3,7 @@ require( "vendor/autoload.php" );
 require( "config.php" );
 require( "modifier_pangea.php" );
 require( "modifier_hostname.php" );
+require( "modifier_datauri.php" );
 
 date_default_timezone_set('Europe/Prague');
 if( !isset($config) ) die( "ERROR: config file missing?");
@@ -51,7 +52,8 @@ if( isset( $config["limit"] ) ) {
 }
 
 // let templating display rest
+header( "Content-Type: text/html; charset=utf-8" );
 $smarty = new Smarty();
 $smarty->assign( "feed", $all );
 $smarty->assign( "config", $config );
-$smarty->display('home.tpl');
+$smarty->display( $config["template"] );
