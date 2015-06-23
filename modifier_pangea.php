@@ -4,7 +4,7 @@
 given a URL and a width, recompose the URL for CDN/GDB resizing
 */
 
-function smarty_modifier_pangea($url, $width = 300) {
+function smarty_modifier_pangea($url, $width = 300, $height = null) {
     $u = parse_url( $url );
 
     if( $u === false ) return($url);
@@ -36,14 +36,25 @@ function smarty_modifier_pangea($url, $width = 300) {
         $base = substr($base, 0, $a);
     }
 
-    $new_url = sprintf(
-        "%s://%s/%s_w%s.%s",
-        $u["scheme"],
-        $u["host"],
-        $base,
-        $width,
-        $f["extension"]
-    );
-
+    if( is_null($height) ) {
+        $new_url = sprintf(
+            "%s://%s/%s_w%s.%s",
+            $u["scheme"],
+            $u["host"],
+            $base,
+            $width,
+            $f["extension"]
+        );
+    } else {
+        $new_url = sprintf(
+            "%s://%s/%s_w%s_h%s.%s",
+            $u["scheme"],
+            $u["host"],
+            $base,
+            $width,
+            $height,
+            $f["extension"]
+        );
+    }
     return( $new_url );
 }

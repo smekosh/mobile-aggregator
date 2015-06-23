@@ -3,7 +3,7 @@
 {if $item->enclosure}
     <div class="pull-left col-md-4">
         <a href="{$item->link}?src=persagg-img">
-            <img class="img-thumbnail" src="{$item->enclosure.url|pangea:200}" />
+            <img class="img-thumbnail" src="{$item->enclosure.url|pangea:200:150|datauri}" />
         </a>
     </div>
 {/if}
