@@ -1,9 +1,12 @@
 {foreach from=$feed item=item}
-<div class="row">
 {if $item->enclosure}
+{capture assign=image_source}{$item->enclosure.url|pangea:200:150|datauri}{/capture}
+{/if}
+<div class="row">
+{if $image_source|strlen>40}
     <div class="pull-left col-md-4">
         <a href="{$item->link}?trk1&src=persagg-img">
-            <img class="img-thumbnail" src="{$item->enclosure.url|pangea:200:150|datauri}" />
+            <img class="img-thumbnail" src="{$image_source}" />
         </a>
     </div>
 {/if}
