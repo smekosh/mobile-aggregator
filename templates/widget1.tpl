@@ -1,3 +1,26 @@
+{if isset($smarty.get.json)}
+{strip}
+{$ret = array()}
+
+{foreach from=$feed item=item}
+{$ret["link"] = $item->link|lower}
+{$ret["title"] = $item->title|lower}
+{$ret["description"] = $item->description|lower}
+
+{if $item->enclosure}
+{capture assign=image_source}{$item->enclosure.url|pangea:200:150}{/capture}
+{/if}
+
+{if $image_source|strlen>40}
+{$ret["thumbnail"] = $image_source}
+{/if}
+
+{/foreach}
+
+
+
+
+{/strip}{$ret|json_encode}{else}
 {foreach from=$feed item=item}
 {if $item->enclosure}
 {capture assign=image_source}{$item->enclosure.url|pangea:200:150}{/capture}
@@ -22,3 +45,5 @@
     </div>
 </div>
 {/foreach}
+
+{/if}
