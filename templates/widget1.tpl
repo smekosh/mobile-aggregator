@@ -35,7 +35,7 @@
 {/if}
     <div class="col-md-8 text-left row">
         <h4>
-            <a class="text-info" href="{$item->link}?trk1&ampsrc=persagg-title">{$item->title}</a>
+            <a class="text-info" href="{$item->link}?trk1&src=persagg-title">{$item->title}</a>
         </h4>
         <p class="description">
             <a class="text-muted" href="{$item->link}?trk1&src=persagg-text">{$item->description}</a>
