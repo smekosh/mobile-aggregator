@@ -115,4 +115,5 @@ h2 {
 
 	.item:nth-child(3n+1) { clear: both; }
 
+    .item:last-child { display: none; visibility: hidden }
 }
