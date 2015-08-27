@@ -3,9 +3,17 @@ require( "vendor/autoload.php" );
 require( "config.php" );
 require( "modifier_pangea.php" );
 require( "modifier_hostname.php" );
+require( "modifier_datauri.php" );
 
 date_default_timezone_set('Europe/Prague');
 if( !isset($config) ) die( "ERROR: config file missing?");
+
+// options for site variants
+if( isset($_GET['config']) ) {
+    $alt_config = "config_" . $_GET['config'];
+    if( !isset( $$alt_config ) ) die( "ERROR: alternate config missing?" );
+    $config = $$alt_config;
+}
 
 // required: cron task to wget RSS files, dump into /local/md5*
 $feeds = array();
@@ -38,7 +46,14 @@ usort( $all, function($a, $b) {
     return( 0 );
 });
 
+// limit entries, if configured to do so
+if( isset( $config["limit"] ) ) {
+    $all = array_slice( $all, 0, $config["limit"] );
+}
+
 // let templating display rest
+header( "Content-Type: text/html; charset=utf-8" );
 $smarty = new Smarty();
 $smarty->assign( "feed", $all );
-$smarty->display('home.tpl');
+$smarty->assign( "config", $config );
+$smarty->display( $config["template"] );
