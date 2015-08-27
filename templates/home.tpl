@@ -14,7 +14,7 @@
         </h2>
         <div class="item_body">
 {if $item->enclosure}
-            <div class="item_img"><a href="{$item->link}?src=persagg-img"><img src="{$item->enclosure.url|pangea:360}" /></a></div>
+            <div class="item_img"><a href="{$item->link}?src=persagg-img"><img src="{$item->enclosure.url|pangea:120}" /></a></div>
 {/if}
             <p class="description">{$item->description|truncate:150}</p>
         </div>
