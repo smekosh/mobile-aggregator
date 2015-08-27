@@ -41,9 +41,16 @@ h2 {
     width: 100%;
 }
 
+.item_img {
+    float: left;
+    max-width: 40%;
+    padding-right: .8em;
+    width: 40%;
+}
+
 .description {
     font-size: 1.6em;
-    padding: .8em;
+    padding: 0 .8em .8em .8em;
     line-height:1.3em;
 }
 
