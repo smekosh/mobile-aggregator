@@ -7,6 +7,7 @@
     <meta http-equiv="Content-Language" content="fa" />
     <link rel="stylesheet" href="{$config.home}/reset.css" type="text/css" />
     <link rel="stylesheet" href="{$config.home}/aggregator.css?v=0.03" type="text/css" />
+    <script src="//cdn.optimizely.com/js/2326530349.js"></script>
     <script type="text/javascript" src="{$config.home}/layout.js"></script>
 {block name="head"}
 
